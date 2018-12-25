@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{soul}
+\usepackage{ulem}
+\title{Ejemplos de sintaxis}
+\author{Daniel Ortiz}
+\date{December 2018}
+\begin{document}
+\maketitle
+ \newpage
+\section{Saltos de página}
+Saltamos de página \newpage
+Volvemos a saltar de página pero acabando todos los elementos flotantes que hubiera \clearpage
+\section{Saltos de línea}
+Salto de línea básico 1. \\
+Salto de línea con espaciado.\par
+Salto de línea básico 2  \quad  y espaciado. \newline
+\section{Alineaciones de texto}
+\begin{flushleft}
+Texto a la izquierda.
+\end{flushleft}
+\begin{center}
+Texto centrado.
+\end{center}
+\begin{flushright}
+Texto a la derecha.
+\end{flushright}
+\section{Modificadores de texto}
+\subsection{Básicos}
+\textbf{Texto en negrita}, y normal.
+\newline
+\newline
+\textit{Texto en cursiva}, y normal.
+\newline
+\newline
+\texttt{Texto en maquina de escribir}, y normal.
+\newline
+\newline
+\textsc{Texto en versálita}, y normal.
+\newline
+\newline
+\emph{Texto emfatizado}, y normal.
+\newline
+\newline
+\underline{Texto subrayado}, y normal.
+\newline
+\newline
+\textrm{Texto redondo}, y normal.
+\newline
+\newline
+\textst{texto tachado 1}, y normal. %necesita el paquete soul
+\newline
+\newline
+\sout{texto tachado 2}, y normal. %necesita el paquete ulem
+\newline
+\newline
+\uuline{texto doble tachado}, y normal. %necesita el paquete ulem
+\newline
+\newline
+\uwave{texto tachado ondulado}, y normal. %necesita el paquete ulem
+\newline
+\newline
+\xout{texto tachado con impetú}, y normal. %necesita el paquete ulem
+\clearpage
+\subsection{Tamaño de letra}
+\normalsize{Letra con tamaño normalizado}, y normal.
+\newline
+\newline
+{\tiny{Letra con tamaño diminuto}}, y normal.
+\newline
+\newline
+{\scriptsize{Letra muy pequeña}}, y normal.
+\newline
+\newline
+{\footnotesize{Letra pequeña}}, y normal.
+\newline
+\newline
+{\small{Letra más grande de las pequeñas}}, y normal.
+\newline
+\newline
+{\large{Letra grande}}, y normal.
+\newline
+\newline
+{\Large{Letra más grande}}, y normal.
+\newline
+\newline
+{\LARGE{Letra muy grande}}, y normal.
+\newline
+\newline
+{\huge{Letra enorme}}, y normal.
+\newline
+\newline
+{\Huge{Letra más enorme}}, y normal.
+\subsection{Ejemplos de combinaciones}
+\begin{center}
+Frase con \small{\textit{itálica pequeña}} en una estructura centrada.
+\end{center}
+Frase con {\Huge{\textsc{versálita enorme}}}.
+\begin{flushleft}
+Frase con letra {\tiny{\texttt{pequeña y a máquina}}} en una estructura a la izquierda.
+\end{flushleft}
+\end{document}
