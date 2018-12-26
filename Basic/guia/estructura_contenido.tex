@@ -3,6 +3,10 @@
 \usepackage[spanish]{babel}
 \usepackage{soul}
 \usepackage{ulem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{multicol}
 \title{Estructura de contenido}
 \author{Daniel Ortiz}
 \date{December 2018}
@@ -22,4 +26,61 @@ Signos de interrogaciones (cuando no se detecta de forma normal):
 \begin{center}
      ?`Esto es una pregunta?
 \end{center}
+\clearpage
+\section{Inserción de imágenes}
+\subsection{Inserción básica}
+\begin{figure}[H] %con la posicion H indicamos que colocamos la imagen justo donde aparece en el código
+\centering \includegraphics[width=0.5\textwidth]{Images/image1.png} \caption{Imagen de ejemplo}
+\end{figure}
+\begin{figure}[h]
+\raggedright \includegraphics[width=3cm]{Images/image2.png} 
+\caption{Imagen con distintos parámetros}
+\end{figure}
+\subsection{Inserción conjunta}
+\begin{figure}[H] 
+\centering
+\subfigure[Image 1]{\includegraphics[width=40mm]{Images/image1.png}}
+\subfigure[Image 2]{\includegraphics[width=40mm]{Images/image2.png}}
+\caption{Dos imágenes juntas con el mismo ancho} 
+\end{figure}
+\begin{multicols}{2} 
+    \begin{figure}[H]
+    \centering \includegraphics[width=0.4\textwidth]{Images/image1.png} \caption{Image 1 enfrentada}
+    \end{figure} 
+    \begin{figure}[H]
+    \centering \includegraphics[width=0.4\textwidth]{Images/image2.png} \caption{Image 2 enfrentada}
+    \end{figure} 
+\end{multicols}
+\begin{multicols}{2}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{Images/image1.png}
+\caption{Imagen con texto}
+\end{figure}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+\end{multicols}
+\clearpage
+\section{Tablas}
+\subsection{Tabla básica con tabbing}
+\begin{tabbing}
+%hspace indica la anchura de las columnas y\kill que esta fila no se imprime
+\hspace*{3 cm} \= \hspace*{6 cm}\= \hspace*{3cm}\kill
+% > indica que se pasa al siguiente tab de la tabla y \\ que pasamos de fila
+Nombre \> DNI \> Nota final\\
+Luis \> 52047692Q \> 8.56\\
+Nuria \> 0285801L \> 9.12\\
+Esteban \> 145058R \> 5.2\\
+Lucia \> 7852205E \> 2.3
+\end{tabbing}
+\subsection{Tabla avanzadas con tabular}
+% tabla creada con https://www.tablesgenerator.com/
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|c}
+\cline{1-4}
+\textbf{Columna 1} & \textbf{Columna 2} & \textbf{Columna 3} & \textbf{Columna final} &  \\ \cline{1-4}
+Valor 1.1          & Valor 1.2          & Valor 1.3          & Valor Final 1          &  \\ \cline{1-4}
+Valor 2.1          & Valor 2.2          & Valor 2.3          & Valor Final 2          &  \\ \cline{1-4}
+Valor 3.1          & Valor 3.2          & Valor 3.3          & Valor Final 3          &  \\ \cline{1-4}
+\end{tabular}
+\end{table}
 \end{document}
