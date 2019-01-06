@@ -7,6 +7,9 @@
 \usepackage{float}
 \usepackage{subfigure}
 \usepackage{multicol}
+\usepackage{pifont}
+\usepackage{enumerate}
+\usepackage{amsmath}
 \title{Estructura de contenido}
 \author{Daniel Ortiz}
 \date{December 2018}
@@ -83,23 +86,86 @@ Valor 2.1          & Valor 2.2          & Valor 2.3          & Valor Final 2    
 Valor 3.1          & Valor 3.2          & Valor 3.3          & Valor Final 3          &  \\ \cline{1-4}
 \end{tabular}
 \end{table} 
-\section{Listas}
+\newpage
+\section{Items} 
+\subsection{Items básicos}
 \begin{itemize}
-\item Items de primer nivel
-\begin{itemize}
-\item Items de segundo nivel 
-\item Items de segundo nivel
-\begin{enumerate}
-\item Items enumerados de tercer nivel
-\item Items enumerados de tercer nivel
+    \item Items de primer nivel
+        \begin{itemize}
+            \item Items de segundo nivel 
+            \item Items de segundo nivel
+            \begin{enumerate}
+            \item Items enumerados de tercer nivel
+            \item Items enumerados de tercer nivel
+            \end{enumerate}
+            \item Items de segundo nivel
+               \begin{itemize}
+                    \item Items de tercer nivel 
+                    \begin{itemize}
+                        \item Existen hasta items de cuarto nivel
+                    \end{itemize}
+               \end{itemize}
+        \end{itemize}
+    \item Items de primer nivel
+\end{itemize}
+\subsection{Modificando marcadores}
+% los distintos marcadores se obtienen de la url http://willbenton.com/wb-images/pifont.pdf
+% el numero resultante sale de sumar el numero de la fila que queremos mas la columna
+\begin{itemize} \renewcommand{\labelitemi}{\ding{51}}
+    \item Caso 1. 
+    \item Caso 2. 
+    \item Caso 3.
+    \begin{itemize} \renewcommand{\labelitemii}{\ding{60}}
+        \item \textbf{Figura 1}.
+        \item \textbf{Figura 2}.
+            \begin{itemize} \renewcommand{\labelitemiii}{\ding{81}}
+            \item Ejemplo 1. 
+            \item Ejemplo 2. 
+            \item Ejemplo 3. 
+            \begin{itemize}
+                \renewcommand{\labelitemiv}{\ding{248}} 
+                \item Afirmativo.
+                \item Negativo. 
+            \end{itemize}
+        \end{itemize} 
+    \end{itemize}
+\end{itemize}
+\subsection{Enumerados de más nivel}
+\begin{enumerate} 
+    \item Ejemplo 1. 
+    \item Ejemplo 2.
+    \begin{enumerate} 
+        \item Caso 1. 
+        \item Caso 2. 
+        \item Caso 3.
+        \begin{enumerate} 
+            \item Figura 1. 
+            \item Figura 2.
+            \begin{enumerate}[I] 
+                \item Ecuacion 1. 
+                \item Ecuacion 2. 
+            \end{enumerate} 
+        \end{enumerate}
+    \end{enumerate} 
 \end{enumerate}
-\end{itemize}
-\item Items de primer nivel
-\end{itemize}
-\section{Escritura de código}
-\subsection{Escritura máquina}
-\begin{verbatim}
-Texto por consola y terminal
-\end{verbatim}
-y normal.
+\section{Modo matemático}
+\subsection{Fórmulas simples}
+Ejemplo de fórmula sencilla:
+\[
+y=mx+b
+\]
+\newpage
+\section{Bibliografía, enlaces y referencias} \label{sec:Seccion 1}
+\subsection{Referencias dentro del documento} 
+\begin{flushleft}
+La sección \ref{sec:Seccion 1} trata referencias.
+\end{flushleft}
+\subsection{Bibliografía}
+\subsubsection{Bibliografía simple}
+\begin{thebibliography}{}
+\bibitem{ej1}\textsc{Autor 1}
+\textit{Tema 1} Título de artículo 1
+\bibitem{ej2}\textsc{Apellido Autor 2, Nombre}
+\textit{Tema 2}, 2019
+\end{thebibliography}
 \end{document}
