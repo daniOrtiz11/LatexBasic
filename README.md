@@ -1,7 +1,7 @@
 # LatexBasic
-Pequeñas pruebas de concepto usando Latex.
+Small proofs of concept using Latex.
 
-Basadas en la guía:
+Based on the guide:
 
 **BASIX Latex básico con ejercicios resueltos**
 
